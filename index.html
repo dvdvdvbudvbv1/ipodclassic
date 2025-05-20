@@ -2,34 +2,35 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>iPod Classic Web</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iPod Classic</title>
+  <link rel="manifest" href="manifest.json" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="ipod">
-    <div class="top-bar">
-      <h1>iPod</h1>
-      <button id="addMusic">+</button>
-      <input type="file" id="fileInput" multiple accept="audio/*" style="display: none" />
-    </div>
-
     <div class="screen">
-      <div class="now-playing active">
+      <div id="menu" class="menu active">
+        <h2>Музыка</h2>
+        <h2>Настройки</h2>
+      </div>
+      <div id="player" class="player">
         <img id="cover" src="" alt="Обложка" />
-        <p id="trackTitle">Выберите трек</p>
+        <div id="track-title">Трек</div>
       </div>
     </div>
-
-    <div class="wheel" id="wheel">
-      <div class="button top">MENU</div>
-      <div class="button right">▶|</div>
-      <div class="button bottom">▶▮▮</div>
-      <div class="button left">|◀</div>
-      <div class="center-button" id="centerButton"></div>
+    <div class="controls">
+      <div class="wheel" id="wheel">
+        <div class="button menu-btn">MENU</div>
+        <div class="button play-btn">▶️⏸️</div>
+        <div class="button next-btn">⏩</div>
+        <div class="button prev-btn">⏪</div>
+        <div class="center-btn" id="select-btn"></div>
+      </div>
     </div>
+    <input id="file-input" type="file" accept="audio/*" hidden multiple />
+    <button id="upload-btn">+</button>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
