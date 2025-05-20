@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.ipod {
+  width: 300px;
+  height: 500px;
+  background: #ddd;
+  border-radius: 30px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.screen {
+  flex: 1;
+  background: #fff;
+  padding: 10px;
+  border-bottom: 2px solid #aaa;
+}
+
+.menu h1 {
+  margin: 0 0 10px 0;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.menu li.active {
+  background: #007aff;
+  color: #fff;
+}
+
+.wheel {
+  background: #ccc;
+  height: 200px;
+  position: relative;
+  border-top: 2px solid #aaa;
+}
+
+.button {
+  position: absolute;
+  text-align: center;
+  width: 100px;
+  font-size: 14px;
+  font-weight: bold;
+  user-select: none;
+}
+
+.top {
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.right {
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.bottom {
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.left {
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.center-button {
+  width: 60px;
+  height: 60px;
+  background: #999;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
